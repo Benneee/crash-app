@@ -1,20 +1,22 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <Header />
+
+    <router-view />
+  </div>
 </template>
 
 <script>
+import Header from './components/layout/Header';
 export default {
-  name: 'App',
-  components: {},
+  name: 'app',
+  components: {
+    Header,
+  },
 };
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,16 +24,17 @@ export default {
   /* text-align: center; */
   color: #2c3e50;
 }
+
 #nav {
-  padding: 20px;
+  padding: 30px;
 }
+
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
-  text-decoration: none;
+  color: #fff;
 }
+
 #nav a.router-link-exact-active {
-  color: rgb(71, 71, 197);
-  text-decoration: underline;
+  color: #42b983;
 }
 </style>
